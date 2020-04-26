@@ -1,0 +1,51 @@
+body{
+    background-image: url(image7.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+}
+.login-page{
+    height: 360px;
+    width: 260px;
+    background:rgba(100,100,255,0.8);
+    padding: 45px;
+    margin-top:180px;
+    margin-left: 35%;
+}
+.form input{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 25px;
+    padding: 13px;
+    background:#f2f2f2;
+    outline: 1;
+    border: 0;
+}
+.form button{
+    width: 100%;
+    text-align:center;
+    margin: 12px 0 27px;
+    padding:13px;
+    border:1;
+    background:#03fc56;
+    cursor:pointer;
+}
+.form button:hover,.form button:active{
+    background:#4efc03;
+}
+.form .message{
+    text-align: center;
+    margin:0 0 0;
+    color:#ffff;
+}
+.form .message a{
+    text-decoration: none;
+    color:#2f2;
+}
+
+login-form{
+    display:none;
+}
+.register-form{
+    display:none;
+}

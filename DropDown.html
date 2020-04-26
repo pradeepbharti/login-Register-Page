@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <title>Drop down</title>
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.js">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>About Us</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="vission.html">Vission</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=iUk-zgfRFU4&list=PLIY8eNdw5tW85F-TuX65zYinmTnPUGzXw&index=9">Team</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-clone"></i>Service</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">Web Designing</a></li>
+                        <li class="hover-me"><a href="#">Marketing<i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">SEO</a></li>
+                                    <li><a href="#">Social Marketing</a></li>
+                                    <li><a href="#">Email Marketing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Mobiel App<i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">Android App</a></li>
+                                    <li><a href="#">iOS App</a></li>
+                                    <li><a href="#">Unity App</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-users"></i>Client</a></li>
+            <li><a href="#"><i class="fa fa-angellist"></i>Invester</a></li>
+            <li><a href="#"><i class="fa fa-edit"></i>Training</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li class="hover-me"><a href="#">Web Development<i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">Front End Language</a></li>
+                                    <li><a href="#">Backend Language</a></li>
+                                    <li><a href="#">Fullstack Developer</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Android Development<i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">Java</a></li>
+                                    <li><a href="#">Python</a></li>
+                                    <li><a href="#">C#</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">UI/UX Design<i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">HTML/CSS</a></li>
+                                    <li><a href="#">Javascript/Jquery</a></li>
+                                    <li><a href="#">Bootstrap</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-inr"></i>Pricing</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
+        </ul>
+    </div>
+    <div class="Datepicker">
+        <h2>Name:<input type="text" placeholder="Full Name" title="" id="selectname"></h2>
+        <h2>Date Of Birth:<input type="text" id="selectdate" title="" placeholder="Select Date"></h2>
+        <h2>Country Name:<input type="text" id="selectcountry" title="" placeholder="Select Country"></h2>
+        <h2>Gender:<input type="text" id="selectgender" title="" placeholder="Select Gender"></h2>
+
+    </div>
+    <div class="mydiv">
+        <h2>Web Development</h2>
+        <p>Here we provide many online video for training purpose</p>
+
+        <h2>Web Development</h2>
+        <p>Here we provide many online video for training purpose</p>
+
+        <h2>Web Development</h2>
+        <p>Here we provide many online video for training purpose</p>
+    </div>
+
+    <div id="firstidiv">
+        <h3>Hello welcome to pradeeep bharti</h3>
+        <br>
+        <button id="btn1">Click to show message box</button>
+    </div>
+    <br>
+    <br>
+    <div id="messagebox" title="messagebox">
+        <h2>This is just a dummy title</h2>
+        <div class="div3">
+            <h1>Pradeep</h1>
+        </div>
+        <br>
+    </div>
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script>
+    $("#document").ready(function () {
+        $("#selectdate").datepicker({
+            changeYear: true,
+            changeMonth: true,
+
+        });
+        $("#selectcountry").autocomplete({
+            source: ["Afghanistan", "Albania", "Algeria", "Andorra", "Australia", "Austria", "Bangladesh", "Belize", "Butan", "Brajil", "Canada", "China", "North Koera", "India", "Pakistan", "Japan", "Spain", "Germeny", "Itely"]
+        },
+            {
+                autoFocus: true,
+                delay: 0,
+                minLenght: 1,
+
+            });
+        $("#selectgender").autocomplete({
+            source: ["Male", "Female", "Transgender"]
+        },
+            {
+                autoFocus: true,
+                delay: 0,
+                minLenght: 0,
+            })
+        $("#selectdate").tooltip({
+            track: true,
+            content: "Choose Date",
+            //show:{effect:"bounce",duration:300},
+
+        });
+        $("#selectname").tooltip({
+            track: true,
+            content: "Wright Proper Name",
+            //show:{effect:"bounce",duration:300},
+
+        });
+        $("#selectcountry").tooltip({
+            track: true,
+            content: "Choose Right Cuntry",
+            //show:{effect:"bounce",duration:300},
+
+        });
+        $("#selectgender").tooltip({
+            track: true,
+            content: "Select Proper Gender",
+            //show:{effect:"bounce",duration:300},
+
+        });
+        $(".mydiv").accordion({
+            active: 0,
+            collapsible: true,
+            event: "click",
+            icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" },
+        });
+        $("#btn1").click(function () {
+            $("#messagebox").dialog({
+                title: "Custome message box",
+                draggable: true,
+                resizable: true,
+                height: 500,
+                width: 300,
+                modal: true,
+
+                buttons: [
+                    {
+                        text: "close",
+                        icon: "ui-icon-heart",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text: "Ok",
+                        icon: "ui-icon-heart",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+
+        });
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Message redirect</title>
+        <script type="text/javascript">
+        var id=0;
+        var seconds=0;
+        function printMsg()
+        {
+            document.getElementById("op").innerHTML=seconds+" seconds";
+            seconds++;
+        }
+        function start()
+        {
+            id=window.setInterval(printMsg,1000);
+        }
+        function stop()
+        {
+            window.clearInterval(id);
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Welcome</h2>
+        <button id="btn"  onclick="start()">Start</button>
+        <h1 id="op">Some Text</h1>
+        <button id="btn"  onclick="stop()">Stop</button>
+                
+    </body>
+</html>

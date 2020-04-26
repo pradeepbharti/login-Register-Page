@@ -1,0 +1,136 @@
+<hmtl>
+  <head>
+    <title>Practice make perfect</title>
+    <link rel="stylesheet" href="style1.css">
+    <script type="text/javascript">
+    function fn1()
+    {
+      var username = document.getElementById("uname").value;
+      var regx = /[a-z]/i;
+      if(regx.test(username))
+      { 
+        uname.style.border="3px solid green";
+        document.getElementById("lbluser").innerHTML="Valid Username"
+        document.getElementById("lbluser").style.color="green"
+      }
+      else{
+        uname.style.border="3px solid red";
+        document.getElementById("lbluser").style.visibility="visible";
+        return false;
+      }
+      var password= document.getElementById("pass").value;
+      var regx = /[a-z][0-9]/
+      if(regx.test(password))
+      {
+        pass.style.border="3px solid green";
+        document.getElementById("lbluser1").innerHTML="Password has stronged";
+        document.getElementById("lbluser1").style.color="green";
+      }
+      else{
+        pass.style.border="3px solid red";  
+        document.getElementById("lbluser1").style.visibility="visible";
+        return false;  
+      }
+      var Email = document.getElementById("email").value;
+      var regx = /[a-z,0-9]@[gmail,.com]/i;
+      if(regx.test(Email))
+      {
+        email.style.border="3px solid green";
+        document.getElementById("lbluser2").innerHTML="E-mail format is correct";
+        document.getElementById("lbluser2").style.color="green";
+      }
+      else{
+        email.style.border="3px solid red";
+        document.getElementById("lbluser2").style.visibility="visible";
+        return false;
+      }
+      var username = document.getElementById("uname");
+      var password = document.getElementById("pass");
+      var Email = document.getElementById("email");
+      if(username.value.trim()=="" || password.value.trim()=="" || Email.value.trim()=="")
+      {
+        alert("BLOCK SHOULD NOT BE BLANK");
+        return false;
+      }
+      else
+      {
+        alert("REGISTER SUCCESSFULL");
+        return true;
+      }
+    }
+    function fn2()
+    {
+     var username = document.getElementById("uname1").value;
+     var regx = /[a-z]/i;
+     if(regx.test(username))
+     {
+       document.getElementById("lbluser3").innerHTML="Valid Username";
+       document.getElementById("lbluser3").style.color="green";
+       uname1.style.border="3px solid green";
+     }
+     else{
+       uname1.style.border="3px solid red";
+       document.getElementById("lbluser3").style.visibility="visible";
+       return false;
+     }
+     var password = document.getElementById("pass1").value;
+     var regx = /[0-9]/i;
+     if(regx.test(password))
+     {
+       document.getElementById("lbluser4").innerHTML="Password has strogned";
+       document.getElementById("lbluser4").style.color="green";
+       pass1.style.border="3px solid green"
+     }
+     else{
+      pass1.style.border="3px solid red";
+      document.getElementById("lbluser4").style.visibility="visible"
+      return false;
+     }
+     var username = document.getElementById("uname1");
+     var password = document.getElementById("pass1");
+     if(username.value.trim()=="" || password.value.trim()=="")
+     {
+       alert("BLOCK SHOULD NOT BE BLANK");
+     }
+     else{
+       alert("LOGIN SUCCESSFULL");
+       return true;
+     }
+    }
+
+    </script>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form" onsubmit=" return fn1()" action="DropDown.html" autocomplete="on">
+          <label id="lbluser" style="color:red;visibility: hidden;">Username should be in format</label>
+          <input type="text" id="uname" placeholder="Username"/ required>
+          <label id="lbluser1" style="color:red; visibility: hidden;">Password must be strong</label>
+          <input type="password" id="pass" placeholder="Password"/ required>
+          <br>
+          <label id="lbluser2" style="color:red; visibility: hidden;">Email should be in format</label>
+          <input type="text" id="email" placeholder="E-mail"/ required>
+          <button>Register</button>
+          <p class="message">Already Register? <a href="#">Login</a></p>
+        </form>  
+        <form class="login-form" onsubmit="return fn2()" action="index.html" autocomplete="on">
+        <label id="lbluser3" style="color:red; visibility: hidden;">Username should be in format</label>
+          <input type="text" id="uname1" placeholder="Username" required/> 
+          <br>
+          <label id="lbluser4" style="color:red; visibility: hidden;">Password must be strong</label>
+          <input type="password" id="pass1" placeholder="Password"/ required>
+          <br>
+          <button>Login</button>
+          <p class="message">Not Register? <a href="#">Register here</a></p>
+        </form>
+        </div>
+      </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+      <script>
+        $('.message a').click(function(){
+          $('form').animate({height:"toggle",opacity:"toggle"},"slow")
+        });
+      </script>
+  </body>
+</hmtl>

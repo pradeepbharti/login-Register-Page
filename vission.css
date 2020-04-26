@@ -1,0 +1,19 @@
+body{
+    background-image:url(content.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    font-family: sans-serif;
+    background-attachment: fixed;
+}
+h1,p{
+    margin:25px 300px;
+    float:left;
+    font-family:tahoma
+}
+h1{
+    font-size:50px;
+}
+p{
+    font-size:30px;
+}
